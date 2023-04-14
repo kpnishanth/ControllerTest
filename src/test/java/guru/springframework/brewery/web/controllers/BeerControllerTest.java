@@ -56,6 +56,7 @@ class BeerControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.id", is(bluemoon.getId().toString())))
                 .andExpect(jsonPath("$.beerName",is(bluemoon.getBeerName())))
+                .andExpect(jsonPath("$.quantityOnHand",is(bluemoon.getQuantityOnHand())))
         ;
     }
 }
